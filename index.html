@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validacion de formularios con ajax</title>
+    <script src="peticion.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<form action="">
+    <label for="nombre">Nombre:</label>
+    <input onchange="validarNombre()" type="text" id="nombre" name="nombre"><br><br> <!-- Solo letras y espacio en blanco, length > 3, Primera en mayuscula -->
+    <label for="apellido">Apellidos:</label>
+    <input onchange="validarApellido()" type="text" id="apellido" name="apellido"><br><br> <!-- Solo letras y espacio en blanco, length > 5, distinto al nombre, al menos un espacio en blanco -->
+    <label for="edad">Edad:</label>
+    <input onchange="validarEdad()" type="text" id="edad" name="edad"><br><br> <!-- Solo numeros, edad > 18 -->
+    <button onclick="validarFormulario()" type="button" id="form">Enviar</button>
+</form>
+</body>
+</html>
